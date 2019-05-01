@@ -68,6 +68,7 @@ class ExpressionTree
             }
         }
  
+ 
         /** berfungsi untuk memunculkan simpul **/
         TreeNode *pop()
         {
