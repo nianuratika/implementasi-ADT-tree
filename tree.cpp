@@ -99,10 +99,7 @@ class ExpressionTree
             }
             else if (isOperator(val))
             {
-                TreeNode *nptr = new TreeNode(val);
-                nptr->left = pop();
-                nptr->right = pop();
-                push(nptr);
+              
             }
             else
             {
