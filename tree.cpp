@@ -56,18 +56,7 @@ class ExpressionTree
  
         /** berfungsi untuk mendorong suatu node **/
  
-        void push(TreeNode *ptr)
-        {
-            if (top == NULL)
-                top = new StackNode(ptr);
-            else
-            {
-                StackNode *nptr = new StackNode(ptr);
-                nptr->next = top;
-                top = nptr;
-            }
-        }
- 
+       
  
         /** berfungsi untuk memunculkan simpul **/
         TreeNode *pop()
