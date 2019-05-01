@@ -99,7 +99,10 @@ class ExpressionTree
             }
             else if (isOperator(val))
             {
-              
+                TreeNode *nptr = new TreeNode(val);
+                nptr->left = pop();
+                nptr->right = pop();
+                push(nptr);
             }
             else
             {
@@ -219,30 +222,4 @@ class ExpressionTree
         {
             if (ptr != NULL)
             {
-                cout<<ptr->data;
-                preOrder(ptr->left);
-                preOrder(ptr->right);            
-            }    
-        }
-};
- 
- 
- 
-/** Main Contains menu **/
-int main()
-{
-    string s;
-    cout<<"Expression Tree Test"<<endl;
-    ExpressionTree et;
-    cout<<"\nMasukkan persamaan dalam bentuk awalan: ";
-    cin>>s;
-    et.buildTree(s);
-    cout<<"\nPrefix  : ";
-    et.prefix();
-    cout<<"\n\nInfix   : ";
-    et.infix();
-    cout<<"\n\nPostfix : ";
-    et.postfix();
-    cout<<"\n\nHasil yang Dievaluasi : "<<et.evaluate();
-    return 0;
-}
+                
